@@ -7,7 +7,9 @@ The LEDs are leftovers from
 [Matt Mets' Crystal Archway](https://www.evilmadscientist.com/2013/making-at-maker-faire/)
 they are housed in aluminum U-channel with diffuser. 
 
-![ToS Simulator](screenshot.png)
+![ToS Simulator](screenshot.png "ToS Simulator")
+
+![Two Story Art Cabin](Design/ArtCabinPhoto.jpg "Two Story Art Cabin")
 
 # Components
 
