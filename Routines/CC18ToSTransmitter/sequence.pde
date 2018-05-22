@@ -17,10 +17,10 @@ void createSequence() {
   mp.seq(new Line(5 * fps, cel0.getTransparency(), 255));
 
   // Test
-  //TestPattern test = new TestPattern(pixelMap, allStructures);
-  //mp.seq(new PatchSet(test.transparency, 255.0));
-  //mp.seq(new PushCel(cel0, test));
-  //mp.seq(new Wait(5 * fpm));
+  TestPattern test = new TestPattern(pixelMap, allStructures);
+  mp.seq(new PatchSet(test.transparency, 255.0));
+  mp.seq(new PushCel(cel0, test));
+  mp.seq(new Wait(5 * fpm));
 
 
   // Drop
@@ -30,9 +30,9 @@ void createSequence() {
   //mp.seq(new Wait(5 * fpm));
 
 
-  Syphon syphon = new Syphon(pixelMap, allStructures);
-  mp.seq(new PatchSet(syphon.transparency, 255.0));
-  mp.seq(new PushCel(cel0, syphon));
-  mp.seq(new Wait(5 * fpm));
+  //Syphon syphon = new Syphon(pixelMap, allStructures);
+  //mp.seq(new PatchSet(syphon.transparency, 255.0));
+  //mp.seq(new PushCel(cel0, syphon));
+  //mp.seq(new Wait(5 * fpm));
 
 }

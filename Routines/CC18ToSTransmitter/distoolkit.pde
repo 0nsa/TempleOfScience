@@ -194,7 +194,7 @@ public class ArtNetBroadcast extends Broadcast {
     buffer[12] = (byte)(frameCount % 254 + 1);
     
     // Physical port
-    buffer[13] = (byte)(row / rowsPerPacket);
+    buffer[13] = (byte)(row / rowsPerPacket /2);
     
     // Universe (0..32767, we only support 0..255)
     buffer[14] = (byte)(row / rowsPerPacket);
@@ -202,7 +202,7 @@ public class ArtNetBroadcast extends Broadcast {
     
     // Size of data packet
     buffer[16] = (byte)(dataSize >> 8);
-    buffer[17] = (byte)dataSize;    
+    buffer[17] = (byte)dataSize; 
   }
   
   public void setSyncPacket() {

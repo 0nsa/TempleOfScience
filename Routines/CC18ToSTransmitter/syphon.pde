@@ -34,10 +34,17 @@ class Syphon extends DisplayableLEDs {
       img.copy(syphonBuffer, 0, 0, syphonBuffer.width, syphonBuffer.height, 0, 0, this.width, this.height);
       img.loadPixels();
       
+      color c;
+      float r,g,b;
       for (LED led : leds) {
         int x = int((led.position.x - left) * 10);
         int y = int((led.position.y - top) * 10);
-        led.c = img.pixels[y * this.width + x];  
+        c = img.pixels[y * this.width + x];
+        r = red(c) / 4;
+        g = green(c) / 4;
+        b = blue(c) / 4;
+        
+        led.c = color(r,g,b);  
       }
     }
     

@@ -15,14 +15,15 @@ class TestPattern extends DisplayableStrips {
     pg.beginDraw();
     pg.clear();
 
-    pg.stroke(255);
+    pg.stroke(64);
     pg.line(0,s,pg.width,s);
     
     pg.endDraw();
     
-    if (frameCount % 10 == 0) {
+    if (frameCount % 20 == 0) {
       s++;
-      if (s>pg.height) s=0;
+      //if (s>pg.height) s=0;
+      if (s>13) s=0;
     }
     
     super.display();

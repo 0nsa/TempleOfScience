@@ -6,8 +6,8 @@ import moonpaper.opcodes.*;
 
 // If set to "localhost" or "127.0.0.1", it will increment the port.
 // Otherwise it will incrment the IP.
-//public static final String START_HOST = "10.0.1.114";
-public static final String START_HOST = "localhost";
+public static final String START_HOST = "10.0.1.121";
+//public static final String START_HOST = "localhost";
 public static final int START_PORT = 6454;
 
 // Turn on frame capture
@@ -67,7 +67,7 @@ void setup() {
     multicast = new ArtNetMulticast(pixelMap, cabin.strips, START_HOST, START_PORT);
     
   multicast.setListen(false);
-  multicast.setRowsPerPacket(4);
+  multicast.setRowsPerPacket(2);
   multicast.setPG(g);
   multicast.setup();
 
@@ -94,5 +94,6 @@ void draw() {
   }
 
   // Broadcast to simulator
-  multicast.update();
+  //multicast.update();
+  multicast.broadcasters[0].update();
 }
